@@ -5,8 +5,8 @@ const refs = {
   codeImage: document.querySelector("[data-code]"),
   navList: document.querySelector("ul"),
 };
-const lightIconUrl = "/symbol-defs.svg#icon-sun1";
-const darkIconUrl = "/symbol-defs.svg#icon-sun2";
+const lightIconUrl = "symbol-defs.svg#icon-sun1";
+const darkIconUrl = "symbol-defs.svg#icon-sun2";
 let currentUrl = refs.themeIconPath.attributes.href;
 const isTheme = localStorage.getItem("theme");
 
@@ -46,13 +46,13 @@ function navLinkHandler(event) {
 function setDarkAppearance() {
   currentUrl.value = darkIconUrl;
   document.body.classList.add("dark");
-  refs.codeImage.src = "/img/dark-code.png";
+  refs.codeImage.src = "img/dark-code.png";
 }
 function setLightAppearance() {
   currentUrl.value = lightIconUrl;
   document.body.classList.remove("dark");
   document.body.classList.add("light");
-  refs.codeImage.src = "/img/light-code.png";
+  refs.codeImage.src = "img/light-code.png";
 }
 
 function checkTheme() {
